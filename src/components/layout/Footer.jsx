@@ -6,7 +6,8 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
+      {/* MODIFICADO: Cambiado Container por Container fluid para ocupar todo el ancho */}
+      <Container fluid className="px-4">
         <Row className="footer-content">
           {/* Columna 1: Logo y descripción */}
           <Col lg={4} md={6} className="mb-4">
@@ -74,6 +75,15 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <BsInstagram />
+              </a>
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="YouTube"
+              >
+                <BsYoutube />
               </a>
             </div>
           </Col>
