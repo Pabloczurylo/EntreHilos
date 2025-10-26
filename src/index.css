@@ -127,9 +127,7 @@ img {
   transition: all 0.3s ease;
 }
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   :root {
     --font-size-xl: 1.25rem;
@@ -137,4 +135,35 @@ img {
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
   }
+}
+
+/* PERSONALIZACIONES DE BOOTSTRAP */
+
+/* Botones principales */
+.btn-primary {
+  background-color: var(--primary-pink);
+  border-color: var(--primary-pink);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  padding: 0.625rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--primary-pink-hover);
+  border-color: var(--primary-pink-hover);
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+/* Badges */
+.badge {
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-medium);
 }
