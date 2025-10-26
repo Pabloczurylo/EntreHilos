@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
-  const [cartItemsCount, setCartItemsCount] = useState(0); // Por ahora lo dejo así 
+  const [cartItemsCount, setCartItemsCount] = useState(0); // Temporal, luego viene del Context
 
   return (
     <Navbar bg="white" expand="lg" className="header-navbar">
-      <Container>
+      {/* MODIFICADO: Cambiado Container por Container fluid para ocupar todo el ancho */}
+      <Container fluid className="px-4">
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="logo-brand">
           <div className="logo-container">
