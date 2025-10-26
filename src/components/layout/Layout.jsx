@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
-// import Footer from './Footer'; // Lo descomentaremos cuando lo creemos
+import Footer from './Footer'; 
 import './Layout.css';
 
 const Layout = () => {
@@ -15,8 +15,7 @@ const Layout = () => {
       </main>
       
       {/* Footer fijo en todas las páginas */}
-      {/* <Footer /> */}
-      {/* NOTA: Descomentaremos esto cuando creemos el Footer */}
+      <Footer /> 
     </div>
   );
 };
