@@ -84,20 +84,23 @@
 
 .search-icon {
   position: absolute;
-  left: 12px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-gray);
-  font-size: 1.1rem;
+  font-size: 1rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .search-input {
-  padding-left: 40px;
+  padding-left: 45px !important;
+  padding-right: 15px !important;
   border-radius: 25px !important;
   border: 1px solid var(--border-color);
   background-color: var(--bg-pink);
   transition: all 0.3s ease;
+  height: 40px;
 }
 
 .search-input:focus {
