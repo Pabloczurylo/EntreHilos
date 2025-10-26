@@ -1,0 +1,21 @@
+/*LAYOUT PRINCIPAL*/
+
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1; /* Ocupa todo el espacio disponible entre Header y Footer */
+  padding: var(--spacing-lg) 0;
+  background-color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--spacing-md) 0;
+  }
+}

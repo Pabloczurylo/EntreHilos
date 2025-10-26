@@ -1,22 +1,45 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/layout/Header';
+import Layout from './components/layout/Layout';
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
-            <Route path="/tienda" element={<h1>Tienda</h1>} />
-            <Route path="/sobre-nosotros" element={<h1>Sobre Nosotros</h1>} />
-            <Route path="/contacto" element={<h1>Contacto</h1>} />
-            <Route path="/carrito" element={<h1>Carrito</h1>} />
-          </Routes>
-        </main>
-      </div>
+      <Routes>
+        {/* MODIFICADO: Usamos Layout como componente padre */}
+        <Route path="/" element={<Layout />}>
+          {/* Todas estas rutas se renderizan dentro del <Outlet /> del Layout */}
+          <Route index element={
+            <div className="container">
+              <h1 className="text-center my-5">Home</h1>
+            </div>
+          } />
+          
+          <Route path="tienda" element={
+            <div className="container">
+              <h1 className="text-center my-5">Tienda</h1>
+            </div>
+          } />
+          
+          <Route path="sobre-nosotros" element={
+            <div className="container">
+              <h1 className="text-center my-5">Sobre Nosotros</h1>
+            </div>
+          } />
+          
+          <Route path="contacto" element={
+            <div className="container">
+              <h1 className="text-center my-5">Contacto</h1>
+            </div>
+          } />
+          
+          <Route path="carrito" element={
+            <div className="container">
+              <h1 className="text-center my-5">Carrito</h1>
+            </div>
+          } />
+        </Route>
+      </Routes>
     </Router>
   );
 }
