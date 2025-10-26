@@ -1,68 +1,140 @@
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colores principales */
+  --primary-pink: #E91E63;
+  --primary-pink-hover: #C2185B;
+  --primary-pink-light: #F48FB1;
+  
+  /* Colores secundarios */
+  --secondary-orange: #FF9068;
+  --secondary-orange-hover: #FF7A50;
+  
+  /* Fondos */
+  --bg-pink: #FFF0F5;
+  --bg-light-pink: #FFE4EC;
+  --bg-cream: #FFF9F0;
+  --bg-light-green: #E8F5E9;
+  --bg-light-blue: #E3F2FD;
+  
+  /* Colores de texto */
+  --text-dark: #2D2D2D;
+  --text-gray: #666666;
+  --text-light-gray: #999999;
+  --text-white: #FFFFFF;
+  
+  /* Bordes y sombras */
+  --border-color: #E0E0E0;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Tipografía */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+/*  RESET Y ESTILOS BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
 }
+
 a:hover {
-  color: #535bf2;
+  color: var(--primary-pink);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* CLASES PERSONALIZADAS */
+
+/* Colores de texto */
+.text-primary-pink {
+  color: var(--primary-pink);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.text-secondary-orange {
+  color: var(--secondary-orange);
 }
 
-@media (prefers-color-scheme: light) {
+.text-gray {
+  color: var(--text-gray);
+}
+
+/* Fondos */
+.bg-pink {
+  background-color: var(--bg-pink);
+}
+
+.bg-light-pink {
+  background-color: var(--bg-light-pink);
+}
+
+.bg-cream {
+  background-color: var(--bg-cream);
+}
+
+/* Contenedor principal */
+.main-container {
+  min-height: calc(100vh - 80px);
+  padding: var(--spacing-lg) 0;
+}
+
+/* Transiciones suaves */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.75rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
   }
 }
