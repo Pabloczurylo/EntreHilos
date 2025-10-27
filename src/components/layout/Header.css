@@ -1,15 +1,20 @@
-/* HEADER / NAVBAR */
+/* HEADER / NAVBAR*/
 
 .header-navbar {
-  box-shadow: var(--box-shadow);
-  padding: 1rem 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: white !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100vw !important;
+  margin: 0 !important;
+  left: 0;
+  right: 0;
 }
 
-/* LOGO */
+/* LOGO*/
 
 .logo-brand {
   font-weight: var(--font-weight-bold);
@@ -40,7 +45,7 @@
   font-size: 1.5rem;
 }
 
-/* NAVEGACIÓN */
+/* NAVEGACIÓN*/
 
 .nav-link-custom {
   color: var(--text-dark) !important;
@@ -71,7 +76,7 @@
   color: var(--primary-pink) !important;
 }
 
-/* BARRA DE BÚSQUEDA */
+/* BARRA DE BÚSQUEDA*/
 
 .search-form {
   margin: 0 1rem;
@@ -113,7 +118,7 @@
   color: var(--text-light-gray);
 }
 
-/* BOTÓN DE CARRITO */
+/* BOTÓN DE CARRITO*/
 
 .cart-button {
   display: flex;
@@ -152,7 +157,7 @@
   border-radius: 50%;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE*/
 
 @media (max-width: 991px) {
   .search-form {
