@@ -1,0 +1,37 @@
+/* ========================================
+   LAYOUT PRINCIPAL
+   ======================================== */
+
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evitar scroll horizontal */
+  position: relative;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1; /* Ocupa todo el espacio disponible entre Header y Footer */
+  padding: var(--spacing-lg) 0;
+  background-color: #FFFFFF;
+  /* AGREGADO: Asegurar que ocupe el 100% del ancho */
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--spacing-md) 0;
+  }
+  
+  /* AGREGADO: Reducir padding en mobile */
+  .header-navbar .container-fluid,
+  .footer .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
