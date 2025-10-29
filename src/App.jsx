@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 import Layout from './components/layout/Layout';
+import ProductCard from './components/common/ProductCard';
+import { products } from './data/products';
 import './App.css';
 
 function App() {
@@ -8,11 +11,23 @@ function App() {
       <Routes>
         {/* MODIFICADO: Usamos Layout como componente padre */}
         <Route path="/" element={<Layout />}>
-          {/* Todas estas rutas se renderizan dentro del <Outlet /> del Layout */}
+          {/* MODIFICADO: Ruta Home con ProductCards para visualizar el componente */}
           <Route index element={
-            <div className="container">
-              <h1 className="text-center my-5">Home</h1>
-            </div>
+            <Container fluid className="px-4 py-5">
+              <h1 className="text-center mb-2">Productos Destacados</h1>
+              <p className="text-center text-gray mb-5">
+                Descubre nuestras creaciones hechas con amor
+              </p>
+              
+              {/* Grid de productos */}
+              <Row className="g-4">
+                {products.map(product => (
+                  <Col key={product.id} xs={12} sm={6} md={4} lg={3}>
+                    <ProductCard product={product} />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           } />
           
           <Route path="tienda" element={

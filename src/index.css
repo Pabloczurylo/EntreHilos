@@ -146,7 +146,7 @@ img {
   }
 }
 
-/* PERSONALIZACIONES DE BOOTSTRAP */
+/* PERSONALIZACIONES DE BOOTSTRAP*/
 
 /* Botones principales */
 .btn-primary {
@@ -164,6 +164,35 @@ img {
   background-color: var(--primary-pink-hover);
   border-color: var(--primary-pink-hover);
   box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
+
+/* AGREGADO: Botones secundarios para ProductCard */
+.btn-secondary {
+  background-color: var(--secondary-orange);
+  border-color: var(--secondary-orange);
+  border-radius: var(--border-radius-md);
+  color: var(--text-white);
+  font-weight: var(--font-weight-medium);
+  padding: 0.625rem 1.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: var(--secondary-orange-hover) !important;
+  border-color: var(--secondary-orange-hover) !important;
+  color: var(--text-white) !important;
+  box-shadow: 0 4px 12px rgba(255, 144, 104, 0.3);
+  transform: translateY(-2px);
+}
+
+/* AGREGADO: Cards para ProductCard */
+.card {
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
 /* Navbar */
